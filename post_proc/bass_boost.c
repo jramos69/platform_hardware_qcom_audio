@@ -150,6 +150,8 @@ int bassboost_set_device(effect_context_t *context, uint32_t device)
     ALOGV("%s: device: %d", __func__, device);
     bass_ctxt->device = device;
     if ((device == AUDIO_DEVICE_OUT_SPEAKER) ||
+       (device == AUDIO_DEVICE_OUT_WIRED_HEADSET) ||
+       (device == AUDIO_DEVICE_OUT_WIRED_HEADPHONE) ||
        (device == AUDIO_DEVICE_OUT_BLUETOOTH_SCO_CARKIT) ||
        (device == AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_SPEAKER) ||
        (device == AUDIO_DEVICE_OUT_AUX_DIGITAL) ||
